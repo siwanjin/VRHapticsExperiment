@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcaa7e3586c391c408bce032a208216f, type: 3}
+  m_Name: MainSequence
+  m_EditorClassIdentifier: Assembly-CSharp::VRHapticsExperiment.ConditionSequence
+  conditions:
+  - {fileID: 11400000, guid: c328a25f78c2a1c43aad59adf624c6ea, type: 2}
+  - {fileID: 11400000, guid: 3464867052f6750429ff4604fe095c75, type: 2}
+  - {fileID: 11400000, guid: 6a9aabe1001ec7d4997d5ef87ca0021d, type: 2}
+  - {fileID: 11400000, guid: 0a067b1038958c243ac1694ebfa70cda, type: 2}
+  - {fileID: 11400000, guid: 61d95a62c163f324e8ace080eec7d575, type: 2}
+  - {fileID: 11400000, guid: 06d267249e3f239429d19897c708aa40, type: 2}
+  - {fileID: 11400000, guid: dc4216ab8c2e9a14884efa5d5a9a4b7f, type: 2}
+  - {fileID: 11400000, guid: e47234c0f1d47ec4d84f6586d600d5ed, type: 2}
+  shuffleOnStart: 1
