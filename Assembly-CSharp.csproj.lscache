@@ -61,11 +61,11 @@ Assets/
   ExperimentEnums.cs
   HitContext.cs
   ManualConditionController.cs
+  ParticipantProfile.cs
  Scripts/Managers/
   DataLogger.cs
   ExperimentManager.cs
   HapticManager.cs
-  test.cs
  TutorialInfo/Scripts/Readme.cs
 Temp/obj/Assembly-CSharp/.NETStandard,Version=v2.1.AssemblyAttributes.cs
 
