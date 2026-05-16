@@ -49,10 +49,8 @@ namespace VRHapticsExperiment
                 t += Time.deltaTime;
                 float x = Mathf.Clamp01(t / duration);
 
-                // 0 -> 1 -> 0 형태. 중간에서 가장 깊게 들어감.
                 float dentAmount = Mathf.Sin(x * Mathf.PI) * depth;
 
-                // 마지막에 아주 살짝 튀어나왔다가 복귀하는 탄성감.
                 float reboundAmount = 0f;
                 if (x > 0.65f)
                 {
@@ -74,8 +72,6 @@ namespace VRHapticsExperiment
                     float falloff = 1f - (dist / radius);
                     falloff = falloff * falloff * (3f - 2f * falloff); // smoothstep
 
-                    // 핵심: 타격 방향 반대로 튀어나오지 않고,
-                    // 무기가 들어온 방향을 따라 안쪽으로 눌림.
                     Vector3 offset = (localHitDir * dentAmount - localHitDir * reboundAmount) * falloff;
 
                     workingVertices[i] = v + offset;
