@@ -48,7 +48,8 @@ namespace VRHapticsExperiment
 
         public void FlushAll()
         {
-            string dir = Application.persistentDataPath;
+            string dir = Path.Combine(Application.dataPath, "..", "Logs");
+            Directory.CreateDirectory(dir);
 
             File.WriteAllText(
                 Path.Combine(dir, $"{filePrefix}_hits_{timestamp}.csv"),

@@ -11,10 +11,6 @@ namespace VRHapticsExperiment
         [SerializeField] private MeshDeformableTarget deformableTarget;
         [SerializeField] private ManualConditionController manualCondition;
 
-        [Header("Colors")]
-        [SerializeField] private Color softColor = new Color(0.25f, 0.85f, 1f);
-        [SerializeField] private Color hardColor = new Color(0.75f, 0.75f, 0.75f);
-
         [Header("Hard Feedback")]
         [SerializeField] private float hardDuration = 0.18f;
         [SerializeField] private float hardShakeAmount = 0.18f;
@@ -55,30 +51,10 @@ namespace VRHapticsExperiment
 
             if (manualCondition != null)
                 currentType = manualCondition.TargetMaterial;
-
-            ApplyInitialColor();
+            
             ResetVisualState();
 
             Debug.Log($"[TARGET] Start Type: {currentType}");
-        }
-
-        private void ApplyInitialColor()
-        {
-            if (targetRenderer == null)
-                return;
-
-            Color targetColor =
-                currentType == TargetMaterialType.Soft
-                    ? softColor
-                    : hardColor;
-
-            targetRenderer.material.color = targetColor;
-
-            if (targetRenderer.material.HasProperty("_Color"))
-                targetRenderer.material.SetColor("_Color", targetColor);
-
-            if (targetRenderer.material.HasProperty("_BaseColor"))
-                targetRenderer.material.SetColor("_BaseColor", targetColor);
         }
 
         public void ApplyMaterial(TargetMaterialType type)
